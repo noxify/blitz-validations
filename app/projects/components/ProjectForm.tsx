@@ -27,7 +27,7 @@ export const ProjectForm = (props: ProjectFormProps) => {
         }
       }}
     >
-      <LabeledTextField name="name" label="name" placeholder="name" />
+      <LabeledTextField name="name" label="Name" placeholder="Project Name..." />
     </Form>
   )
 }
