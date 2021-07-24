@@ -2,9 +2,10 @@
   "name": "blitz-validations",
   "version": "1.0.0",
   "scripts": {
-    "dev": "blitz dev",
     "build": "blitz build",
-    "start": "blitz start",
+    "db:migrate": "blitz prisma migrate dev",
+    "db:generate": "blitz prisma generate",
+    "start": "blitz build && blitz prisma migrate dev && blitz start",
     "studio": "blitz prisma studio",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "test": "jest",
@@ -24,13 +25,17 @@
     ]
   },
   "dependencies": {
+    "@blitzjs/installer": "0.38.6",
     "@prisma/client": "2.27.0",
+    "autoprefixer": "10",
     "blitz": "0.38.6",
-    "react-dom": "alpha",
-    "react": "alpha",
-    "zod": "3.5.1",
     "final-form": "4.20.2",
-    "react-final-form": "6.5.3"
+    "postcss": "8",
+    "react": "alpha",
+    "react-dom": "alpha",
+    "react-final-form": "6.5.3",
+    "tailwindcss": "2.1.2",
+    "zod": "3.5.1"
   },
   "devDependencies": {
     "@types/preview-email": "2.0.1",
@@ -38,8 +43,8 @@
     "eslint": "7.31.0",
     "husky": "6.0.0",
     "lint-staged": "10.5.4",
-    "prettier-plugin-prisma": "0.14.0",
     "prettier": "2.3.2",
+    "prettier-plugin-prisma": "0.14.0",
     "pretty-quick": "3.1.1",
     "preview-email": "3.0.4",
     "prisma": "2.27.0",
