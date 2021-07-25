@@ -1,10 +1,6 @@
 import { resolver } from "blitz"
 import db from "db"
-import { z } from "zod"
-
-export const CreateProjectSchema = z.object({
-  name: z.string().min(10),
-})
+import { CreateProjectSchema } from "../validations"
 
 export default resolver.pipe(
   resolver.zod(CreateProjectSchema),

@@ -1,7 +1,8 @@
 import { useMutation } from "@blitzjs/core"
 import { Form, FormProps, FORM_ERROR } from "app/core/components/Form"
 import { LabeledTextField } from "app/core/components/LabeledTextField"
-import createProject, { CreateProjectSchema } from "../mutations/createProject"
+import createProject from "../mutations/createProject"
+import { CreateProjectSchema } from "../validations"
 export { FORM_ERROR } from "app/core/components/Form"
 
 type ProjectFormProps = {

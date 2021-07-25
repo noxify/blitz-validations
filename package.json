@@ -6,6 +6,7 @@
     "db:migrate": "blitz prisma migrate dev",
     "db:generate": "blitz prisma generate",
     "start": "blitz build && blitz prisma migrate dev && blitz start",
+    "develop": "blitz dev",
     "studio": "blitz prisma studio",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "test": "jest",
